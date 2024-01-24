@@ -29,6 +29,8 @@
   <button onclick="activateUnblocker()">click me</button>
 
   <script>
+    var clickCount = 0;
+
     function activateUnblocker() {
       // Hide the initial message
       document.getElementById('initialMessage').style.display = 'none';
@@ -38,6 +40,15 @@
       animatedElement.textContent = 'get scammed nerd!';
       animatedElement.className = 'animated-element';
       document.body.appendChild(animatedElement);
+
+      // Increment click count
+      clickCount++;
+
+      // Check if the button has been clicked 10 times
+      if (clickCount === 10) {
+        // Open a new tab (you may need to adjust the URL)
+         window.open("connorIsaNerd.github.io", "_blank", "width=2000,height=2000");
+      }
     }
   </script>
 
