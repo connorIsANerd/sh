@@ -1,1 +1,45 @@
-<h1>you got scammed lol</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @keyframes slideIn {
+      from {
+        margin-left: -100%;
+      }
+      to {
+        margin-left: 0;
+      }
+    }
+
+    .animated-element {
+      animation: slideIn 2s ease-in-out;
+    }
+
+    /* Initially hide the animated element */
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="initialMessage">For unblocker, click here</div>
+  <button onclick="activateUnblocker()">get scammed nerd</button>
+
+  <script>
+    function activateUnblocker() {
+      // Hide the initial message
+      document.getElementById('initialMessage').style.display = 'none';
+
+      // Show and animate the new message
+      var animatedElement = document.createElement('div');
+      animatedElement.textContent = 'Unblocker activated!';
+      animatedElement.className = 'animated-element';
+      document.body.appendChild(animatedElement);
+    }
+  </script>
+
+</body>
+</html>
